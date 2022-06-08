@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  dolphin_uniq_php_fpm:
+    container_name: dolphin_uniq_php_fpm
+    hostname: dolphin_uniq_php_fpm
+    build: .
+    ports:
+      - "31492:80"
+    volumes:
+      - "./nginx.conf:/etc/nginx/sites-available/default"
+      - "./:/var/www/html"
+#  dolphin_uniq_web:
+#    container_name: dolphin_uniq_web
+#
+#    image: nginx
+#    ports:
+#      - "31492:80"
+#    volumes:
+#      - "./nginx.conf:/etc/nginx/conf.d/default.conf"
+#      - "./:/var/www/html"

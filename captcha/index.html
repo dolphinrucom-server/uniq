@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>jCaptcha - Шаг 1</title>
+</head>
+<body>
+
+<form action="go.php" method="post">
+	Введите имя: <input name="name"><br>
+	Введите email: <input name="email"><br>
+	Введите код с картинки: <input name="captcha">
+	<img title="Щёлкните для нового кода" alt="Код" src="jcaptcha.php" style="border: 1px solid #000000" onclick="this.src='jcaptcha.php?id=' + (+new Date());"><br>
+	<input type="submit" value="Отправить!">
+</form>
+
+</body>
+</html>
